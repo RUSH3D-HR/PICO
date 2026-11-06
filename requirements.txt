@@ -1,0 +1,6 @@
+torch==2.5.1
+numpy==1.26.4
+tifffile==2025.3.30
+natsort==8.4.0
+h5py==3.13.0
+tqdm==4.67.1
