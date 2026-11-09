@@ -91,7 +91,7 @@ if __name__ == '__main__':
     
     parser.add_argument('--savefolder', default="./wdf/recon_result/")
     parser.add_argument('--model',default="./save/epoch.pth")
-    parser.add_argument('--resolution', default='101,1989,1989')
+    parser.add_argument('--resolution', default='101,1443,1443')
     parser.add_argument('--psfinfo', default="./psfinfo/pico_psf.pt")
     parser.add_argument('--config', default="./save/config.yaml")
     parser.add_argument('--codefolder', default="./save/code/")
@@ -321,7 +321,7 @@ if __name__ == '__main__':
         print(f'Depth decomposition and Deblurring and Fusion time using {time.time() - t0} s')
 
         ret = ret.cpu().squeeze()
-        percentile_offset = float(ret.max().item()) * 0.001
+        percentile_offset = float(ret.max().item()) * 0.002
         
         ret.sub_(percentile_offset) 
             
